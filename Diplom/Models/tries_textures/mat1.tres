@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cchpdw6vvjrsd"]
+
+[ext_resource type="Texture2D" uid="uid://bwxb1bv7msf22" path="res://Models/normal_maps/JPG/summer_dry_nor.jpeg" id="2_bbcus"]
+[ext_resource type="Texture2D" uid="uid://wh2yksp5jiyl" path="res://Models/roughness_maps/winter_snowy_roug.png" id="3_3p84q"]
+
+[resource]
+resource_name = "Материал"
+cull_mode = 2
+roughness_texture = ExtResource("3_3p84q")
+normal_enabled = true
+normal_scale = 0.19
+normal_texture = ExtResource("2_bbcus")

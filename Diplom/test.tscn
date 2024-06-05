@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://oqxn6y8dvv7n"]
+
+[ext_resource type="Texture2D" uid="uid://bef2h6cg7d651" path="res://images/tahometr.png" id="1_h17g8"]
+[ext_resource type="Script" path="res://test.gd" id="1_woa8b"]
+[ext_resource type="Texture2D" uid="uid://cvoq2i8ol2fdc" path="res://images/speedometr.png" id="2_qskqe"]
+[ext_resource type="Texture2D" uid="uid://dljow668k0qln" path="res://images/petrol.png" id="3_61vld"]
+[ext_resource type="Texture2D" uid="uid://p5hj5f0eth51" path="res://images/speedometr_arrow.png" id="5_j22kk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_woa8b")
+
+[node name="Speedometr" type="Sprite2D" parent="."]
+position = Vector2(249, 252)
+scale = Vector2(0.0875627, 0.0875627)
+texture = ExtResource("2_qskqe")
+
+[node name="Tahometr" type="Sprite2D" parent="."]
+position = Vector2(133, 267)
+scale = Vector2(0.184182, 0.184182)
+texture = ExtResource("1_h17g8")
+
+[node name="Petrol" type="Sprite2D" parent="."]
+position = Vector2(375, 260)
+scale = Vector2(0.110117, 0.110117)
+texture = ExtResource("3_61vld")
+
+[node name="arrow" type="Sprite2D" parent="."]
+position = Vector2(137.594, 262.921)
+rotation = -4.71239
+scale = Vector2(0.0121314, 0.0121314)
+texture = ExtResource("5_j22kk")
+offset = Vector2(1848.42, 53.3301)
+
+[node name="arrow2" type="Sprite2D" parent="."]
+position = Vector2(250, 262)
+rotation = -3.95519
+scale = Vector2(0.014724, 0.014724)
+texture = ExtResource("5_j22kk")
+offset = Vector2(1848.42, 53.3301)
+
+[node name="arrow3" type="Sprite2D" parent="."]
+position = Vector2(376, 270)
+rotation = -1.94546
+scale = Vector2(0.00672634, 0.00672634)
+texture = ExtResource("5_j22kk")
+offset = Vector2(1848.42, 53.3301)
+
+[node name="speed" type="Label" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 204.0
+offset_right = 362.0
+offset_bottom = 227.0
+horizontal_alignment = 1

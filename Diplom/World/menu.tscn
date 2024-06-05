@@ -1,0 +1,222 @@
+[gd_scene load_steps=4 format=3 uid="uid://l4tf3de6scg1"]
+
+[ext_resource type="Script" path="res://World/script_world/Menu.gd" id="1_ihyqa"]
+[ext_resource type="Texture2D" uid="uid://6un5w7bgiqht" path="res://images/manual.png" id="2_1q7n0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uew6b"]
+
+[node name="Menu" type="Control"]
+material = SubResource("CanvasItemMaterial_uew6b")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ihyqa")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 32.0
+offset_top = 36.0
+offset_right = 269.0
+offset_bottom = 137.0
+scale = Vector2(2.01128, 2.32636)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+visibility_layer = 2
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+visibility_layer = 2
+layout_mode = 2
+text = "Play"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 36.0
+offset_right = 1884.0
+offset_bottom = 690.0
+scale = Vector2(1, 1.54953)
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.8432
+offset_right = 62.0
+offset_bottom = 54.8432
+scale = Vector2(25.4192, 5.93509)
+color = Color(0.572549, 0.572549, 0.572549, 0.458824)
+
+[node name="Настройки исходных данных мира_" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 14.8432
+offset_right = 552.0
+offset_bottom = 37.8432
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Настройки исходных данных мира_"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Настройки исходных данных мира:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Время года_" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 52.2739
+offset_right = 336.0
+offset_bottom = 92.2739
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Время года_"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Время года:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Состояние дороги_" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 99.385
+offset_right = 336.0
+offset_bottom = 139.385
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Состояние дороги_"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Состояние дороги:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Время суток_" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 149.078
+offset_right = 336.0
+offset_bottom = 189.078
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Время суток_"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Время суток:
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Погодные условия_" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 198.77
+offset_right = 336.0
+offset_bottom = 238.77
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Погодные условия_"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Погодные условия:
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="OptionButton" type="OptionButton" parent="Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 713.0
+offset_top = 64.5357
+offset_right = 1013.0
+offset_bottom = 84.5357
+
+[node name="OptionButton2" type="OptionButton" parent="Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 713.0
+offset_top = 111.001
+offset_right = 1013.0
+offset_bottom = 131.001
+
+[node name="OptionButton3" type="OptionButton" parent="Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 713.0
+offset_top = 157.467
+offset_right = 1013.0
+offset_bottom = 177.467
+
+[node name="OptionButton4" type="OptionButton" parent="Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 713.0
+offset_top = 201.351
+offset_right = 1013.0
+offset_bottom = 221.351
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 269.114
+offset_right = 679.063
+offset_bottom = 300.114
+scale = Vector2(2.20839, 0.891073)
+
+[node name="Протяженность" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 267.823
+offset_right = 352.0
+offset_bottom = 307.823
+scale = Vector2(1.88263, 1.24625)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Протяженность"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "Протяженность трассы:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Manual" type="Sprite2D" parent="Panel"]
+position = Vector2(535, 476.273)
+scale = Vector2(0.657543, 0.42435)
+texture = ExtResource("2_1q7n0")
+
+[node name="Протяженность2" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 766.0
+offset_top = 270.405
+offset_right = 1055.0
+offset_bottom = 310.405
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Протяженность2"]
+modulate = Color(0.65098, 0.65098, 0.65098, 1)
+layout_mode = 2
+text = "X 200 метров"
+fit_content = true
+autowrap_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(960, 540)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="Panel/OptionButton2" to="." method="_on_option_button_2_pressed"]
+[connection signal="pressed" from="Panel/OptionButton3" to="." method="_on_option_button_3_pressed"]
+[connection signal="pressed" from="Panel/OptionButton4" to="." method="_on_option_button_4_pressed"]

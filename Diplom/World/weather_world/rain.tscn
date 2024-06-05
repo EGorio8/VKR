@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnb6eofp86040"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_biqot"]
+emission_shape_scale = Vector3(10, 3, 10)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 5.0
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_tl0jm"]
+_data = [Vector2(0, 0.0493749), 0.0, 0.0, 0, 0, Vector2(0.119497, 0.114375), 0.0, 0.0, 0, 0, Vector2(0.27044, 0.195625), 0.0, 0.0, 0, 0, Vector2(0.418239, 0.244375), 0.0, 0.0, 0, 0, Vector2(0.657233, 0.374375), 0.0, 0.0, 0, 0, Vector2(0.996855, 0.228125), -2.3055, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qm7vt"]
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.305882, 0.305882, 0.305882, 1)
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_iaqae"]
+material = SubResource("StandardMaterial3D_qm7vt")
+size = 0.1
+curve = SubResource("Curve_tl0jm")
+
+[node name="Rain" type="Node3D"]
+transform = Transform3D(2.00047, 0, 0, 0, 2.00047, 0, 0, 0, 2.00047, 0, 48.5546, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5.98367, -15.2488)
+lod_bias = 0.001
+amount = 100000
+lifetime = 5.54
+speed_scale = 22.0
+randomness = 0.7
+process_material = SubResource("ParticleProcessMaterial_biqot")
+draw_pass_1 = SubResource("RibbonTrailMesh_iaqae")

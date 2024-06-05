@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.3.0 commit date:2022-09-06, commit time:15:39, hash:0759f671ce1f</authoring_tool>
+    </contributor>
+    <created>2024-06-01T22:51:44</created>
+    <modified>2024-06-01T22:51:44</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Плоскость-mesh" name="Плоскость">
+      <mesh>
+        <source id="Плоскость-mesh-positions">
+          <float_array id="Плоскость-mesh-positions-array" count="60">-0.5784196 -0.7759167 0 -0.2024155 1.72922 0 -0.6012077 0 0 0.2911816 -2.095096 0 0.4671567 1.349418 0 0.1671129 0.007596015 0 -0.6012077 -0.5 0 0.4810099 -1.420947 0 0.2672003 2.040658 0 -0.6050058 0.7848516 0 -0.1803331 -1.765934 0 0.5 1 0 0.1405268 0.8911963 0 0.1177387 -0.9975408 0 -0.310099 0.01899009 0 0.5474753 0.2405413 0 0.5759605 -0.1423529 0 -0.2379365 -0.8608121 0 -0.2417345 0.8836002 0 0.5126601 0.7595315 0</float_array>
+          <technique_common>
+            <accessor source="#Плоскость-mesh-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Плоскость-mesh-normals">
+          <float_array id="Плоскость-mesh-normals-array" count="36">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Плоскость-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Плоскость-mesh-map-0">
+          <float_array id="Плоскость-mesh-map-0-array" count="96">0.7049158 0.5512982 0.706251 0.463774 0.8108127 0.3885102 0.9692787 0.4335587 0.3055405 0.5522715 0.2738616 0.4709865 0.5039288 0.4586207 0.5070415 0.5678631 0.2738616 0.4709865 0.469167 0.3651763 0.5568581 0.3712933 0.5039288 0.4586207 0.02240067 0.4324373 0.1765419 0.3882653 0.469167 0.3651763 0.2738616 0.4709865 0.3885297 0.6350587 0.3055405 0.5522715 0.5070415 0.5678631 0.5030013 0.6345306 0.3253364 0.630133 0.09825807 0.5400397 0.3055405 0.5522715 0.3885297 0.6350587 0.09825807 0.5400397 0.02240067 0.4324373 0.2738616 0.4709865 0.3055405 0.5522715 0.6826918 0.634571 0.7049158 0.5512982 0.9692787 0.4335587 0.8984732 0.5414031 0.5030013 0.6345306 0.5070415 0.5678631 0.7049158 0.5512982 0.6826918 0.634571 0.5070415 0.5678631 0.5039288 0.4586207 0.706251 0.463774 0.7049158 0.5512982 0.706251 0.463774 0.6757141 0.3787158 0.7307812 0.3813601 0.8108127 0.3885102 0.5039288 0.4586207 0.5568581 0.3712933 0.6757141 0.3787158 0.706251 0.463774</float_array>
+          <technique_common>
+            <accessor source="#Плоскость-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Плоскость-mesh-vertices">
+          <input semantic="POSITION" source="#Плоскость-mesh-positions"/>
+        </vertices>
+        <polylist count="12">
+          <input semantic="VERTEX" source="#Плоскость-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Плоскость-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Плоскость-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 4 4 4 4 4 4 </vcount>
+          <p>18 0 0 12 0 1 4 0 2 8 0 3 17 1 4 13 1 5 5 1 6 14 1 7 13 2 8 16 2 9 15 2 10 5 2 11 3 3 12 7 3 13 16 3 14 13 3 15 6 4 16 17 4 17 14 4 18 2 4 19 0 5 20 10 5 21 17 5 22 6 5 23 10 6 24 3 6 25 13 6 26 17 6 27 9 7 28 18 7 29 8 7 30 1 7 31 2 8 32 14 8 33 18 8 34 9 8 35 14 9 36 5 9 37 12 9 38 18 9 39 12 10 40 19 10 41 11 10 42 4 10 43 5 11 44 15 11 45 19 11 46 12 11 47</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Плоскость" name="Плоскость" type="NODE">
+        <matrix sid="transform">7.54979e-8 0 1 0 0 1 0 0 -1 0 7.54979e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Плоскость-mesh" name="Плоскость"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

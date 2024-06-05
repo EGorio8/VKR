@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwcasv205m13f"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s2g2k"]
+emission_shape_scale = Vector3(10, 1, 10)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 5.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
+[sub_resource type="Curve" id="Curve_eal7t"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1e-05, 0.504375), 0.0, 0.0, 0, 0, Vector2(0.251572, 1), 0.0, 0.0, 0, 0, Vector2(0.503145, 1), 0.0, 0.0, 0, 0, Vector2(0.622642, 1), 0.0, 0.0, 0, 0, Vector2(0.748428, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0.504375), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x48an"]
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_0vhw4"]
+material = SubResource("StandardMaterial3D_x48an")
+size = 0.2
+sections = 2
+section_length = 0.1
+curve = SubResource("Curve_eal7t")
+
+[node name="Snow" type="Node3D"]
+transform = Transform3D(1.42857, 0, 0, 0, 1.42857, 0, 0, 0, 1.42857, 0, 73.816, 0)
+visible = false
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(11.7498, 0, 0, 0, 11.7498, 0, 0, 0, 11.7498, 0, 0, 0)
+lod_bias = 0.001
+amount = 100000
+lifetime = 14.45
+speed_scale = 0.74
+randomness = 0.47
+process_material = SubResource("ParticleProcessMaterial_s2g2k")
+draw_pass_1 = SubResource("RibbonTrailMesh_0vhw4")

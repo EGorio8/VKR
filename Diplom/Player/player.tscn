@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://48etaipa2m35"]
+
+[ext_resource type="Script" path="res://Player/script_player/Player.gd" id="1_js2y5"]
+[ext_resource type="Script" path="res://Player/script_player/interact.gd" id="2_wqpa6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ksiwd"]
+
+[sub_resource type="GDScript" id="GDScript_1nnm4"]
+script/source = "extends CollisionShape3D
+
+func _pro():
+	#$Label.visible = false
+	#if $CollisionShape3D.is_colliding():
+		#$Label.visible = true
+	#else:
+		#$Label.visible = false
+	pass 
+"
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0, 13.4042, 0)
+script = ExtResource("1_js2y5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.8, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_ksiwd")
+script = SubResource("GDScript_1nnm4")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730163, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, 0, 0, 0)
+visible = false
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+transform = Transform3D(3, 1.19209e-07, 0, 0, -1.31134e-07, -3, -1.19209e-07, 3, -1.31134e-07, 0, -0.7, 0)
+script = ExtResource("2_wqpa6")
+
+[node name="InteractableUI" type="Control" parent="Head/RayCast3D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Head/RayCast3D/InteractableUI"]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 782.0
+offset_right = 1029.0
+offset_bottom = 805.0
+text = "Interact \"e\""
+metadata/_edit_use_anchors_ = true
